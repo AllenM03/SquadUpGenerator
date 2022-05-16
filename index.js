@@ -37,17 +37,66 @@ const starter = () => {
             name: 'email',
             validate: (value) => {if (value){return true} else 
             {return console.log("Please enter a valid email address".red.dim)}}
-            },
-            {
-                type: 'input',
-                message: "Please enter the team manager's office number...".brightMagenta,
-                name: 'office',
-                validate: (value) => {if (value){return true} else 
-                {return console.log("Please enter a valid office number".red.dim)}}
+          },
+          {
+            type: 'input',
+            message: "Please enter the team manager's office number...".brightMagenta,
+            name: 'office',
+            validate: (value) => {if (value){return true} else 
+            {return console.log("Please enter a valid office number".red.dim)}}
               }
-            ])
-          }
+        ])
+        .then(function({name, id, email, office}) {
+            let manager = new Manager(name, id, email, office);
+            let generator = new Generator();
+            generatedTemplate += `${generator.manangerGenerator(manager)}`;
+            menu();
+          })
+        } else {
+          defaultID = 0;
+          menu(); 
         }
     })
 }
 
+//Employee type
+const menu = () => {
+    defaultID++
+    inquirer.prompt([
+      {
+        type: 'list',
+        message: "Please select a new employee or end choice",
+        name: 'menu',
+        choices: ["Engineer".brightGreen,"Intern".brightMagenta, "End".brightRed]
+      }  
+    ])
+    .then((response) => {
+        if (response.menu === "Engineer".brightGreen){
+            engineerQuestions();
+        }   else if (response.menu === "Intern".brightMagenta) {
+            internQuestions();
+        }   else {
+            endTeam();
+        }
+        
+    })
+}
+
+//Engineer questions
+const engineerQuestions = () => {
+    inquirer.prompt([
+        {
+            type: 'input',
+            message:"Please enter the engineer's name...".brightGreen,
+            name: 'name',
+            validate: (value) => {if (value){return true} else
+            {return console.log("Please enter a valid name".blue.dim)}}
+        },
+        {
+            type: 'input',
+            message: "Please enter the engineer's employee ID",
+            name: 'id',
+            default: defaultID
+        }
+    ])
+}
