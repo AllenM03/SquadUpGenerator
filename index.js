@@ -5,6 +5,8 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const Generator = require("./src/generator");
 const htmlGenerator = require("./src/htmlGenerator");
+let generatedTemplate = "";
+let defaultID = 1
 
 // Manager questions
 const starter = () => {
@@ -100,3 +102,11 @@ const engineerQuestions = () => {
         }
     ])
 }
+
+{
+      type: 'input',
+      message: "Please enter the engineer's email address...".brightBlue,
+      name: 'email',
+      validate: (value) => {if (value){return true} else 
+      {return console.log("Please enter a valid email address".red.dim)}}
+    },
