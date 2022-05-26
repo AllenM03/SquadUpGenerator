@@ -86,27 +86,52 @@ const menu = () => {
 
 //Engineer questions
 const engineerQuestions = () => {
-    inquirer.prompt([
-        {
-            type: 'input',
-            message:"Please enter the engineer's name...".brightGreen,
-            name: 'name',
-            validate: (value) => {if (value){return true} else
-            {return console.log("Please enter a valid name".blue.dim)}}
-        },
-        {
-            type: 'input',
-            message: "Please enter the engineer's employee ID",
-            name: 'id',
-            default: defaultID
-        }
+  inquirer.prompt([
+      {
+        type: 'input',
+        message:"Please enter the engineer's name...".brightGreen,
+        name: 'name',
+        validate: (value) => {if (value){return true} else
+        {return console.log("Please enter a valid name".blue.dim)}}
+      },
+      {
+        type: 'input',
+        message: "Please enter the engineer's employee ID",
+        name: 'id',
+        default: defaultID
+      },
+      {
+        type: 'input',
+        message: "Please enter the engineer's email address...".brightBlue,
+        name: 'email',
+        validate: (value) => {if (value){return true} else 
+        {return console.log("Please enter a valid email address".red.dim)}}
+      },
+      {
+        type: 'input',
+        message: "Please enter the engineer's Github username...".brightBlue,
+        name: 'github',
+        validate: (value) => {if (value){return true} else 
+        {return console.log("Please enter a valid Github username".red.dim)}}
+      }
     ])
-}
+    .then(function({name, id, email, github}) {
+      let engineer = new Engineer(name, id, email, github);
+      let generator = new Generator();
+      generatedTemplate += `\n            ${generator.engineerGenerator(engineer)}`
+      menu();
+    })
+  }
 
-{
+// Intern questions
+const internQuestions = () => {
+  inquirer.prompt([ 
+    {
       type: 'input',
-      message: "Please enter the engineer's email address...".brightBlue,
-      name: 'email',
+      message: "Please enter the intern's name...".brightYellow,
+      name: 'name',
       validate: (value) => {if (value){return true} else 
-      {return console.log("Please enter a valid email address".red.dim)}}
+      {return console.log("Please enter a valid name".red.dim)}}
     },
+    {
+        
