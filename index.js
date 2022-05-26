@@ -147,4 +147,10 @@ const internQuestions = () => {
       {return console.log("Please enter a valid email address".red.dim)}}
     },
     {
-        
+      type: 'input',
+      message: "Please enter the intern's school...".brightYellow,
+      name: 'school',
+      validate: (value) => {if (value){return true} else 
+      {return console.log("Please enter a valid school".red.dim)}}
+    }
+  ])
