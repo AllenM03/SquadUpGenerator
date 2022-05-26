@@ -154,3 +154,10 @@ const internQuestions = () => {
       {return console.log("Please enter a valid school".red.dim)}}
     }
   ])
+  .then(function({name, id, email, school}) {
+    let intern = new Intern(name, id, email, school);
+    let generator = new Generator();
+    generatedTemplate += `\n            ${generator.internGenerator(intern)}`
+    menu();
+  })
+}
