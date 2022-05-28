@@ -51,6 +51,7 @@ internGenerator = (user) => {
                     </div>
                 </div>
             </div>`
+        }
 }
+
 module.exports = Generator;
-}

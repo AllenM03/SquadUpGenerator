@@ -51,7 +51,7 @@ const starter = () => {
         .then(function({name, id, email, office}) {
             let manager = new Manager(name, id, email, office);
             let generator = new Generator();
-            generatedTemplate += `${generator.manangerGenerator(manager)}`;
+            generatedTemplate += `${generator.managerGenerator(manager)}`;
             menu();
           })
         } else {
