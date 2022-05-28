@@ -161,3 +161,15 @@ const internQuestions = () => {
     menu();
   })
 }
+
+// Team generator finalize
+const endTeam = () => {
+  const filename = `generatedTeam.html`;
+  const temp = new HTMLGenerator;
+  fs.writeFile("./dist/" + filename, temp.template(generatedTemplate), (err) => 
+  err ? console.log(err) : 
+  console.log("\n\n\nYour team has been generated in the 'dist' folder.\nThanks for using the Team Generator!".brightGreen));
+}
+
+///////////RUN////////
+starter();
