@@ -1,12 +1,53 @@
-<!doctype html>
-<html lang="en">
-    <head>
-          <meta charset="utf-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-          <link rel="stylesheet" href="./generatedTeam.css">
-          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-          <title>Squad Up Team Generator</title>
-    </head>
-    <body>
-          
+body {
+    background-image: url(../assets/email-pattern.png);
+}
+.navbar-light .navbar-brand {
+    color: whitesmoke;
+    text-align: center;
+    width: 100%;
+}
+.card {
+    margin: 40px 40px;
+    float: none;
+    width: 18rem;
+    border: 6px solid #e6e6e6;
+    box-shadow: 2px 2px 4px #c7c7c7;
+}
+.card-body {
+    background-color:#e6e6e6;
+}
+.list-group {
+    border: 1px solid grey;
+    box-shadow: 2px 2px 2px #b8b8b8;
+}
+a {
+    color: #ff4e4e;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover {
+    color: #ff0000;
+    text-decoration: none;
+}
+.list-group-item {
+    background-color:#d6d6d6;
+    border: 1px solid grey;
+}
+.card-header {
+    background-color: #ff4e4e;
+    border: 3px solid #f80000;
+
+}
+.jumbotron {
+    background-image: url(../assets/small_steps.png);
+    border: 2px solid #e6e6e6;
+}
+.jumbotron h1{
+    font-size: 70px;
+    color: #b91313;
+    text-shadow: 2px 2px 6px #bd4e4e;
+}
+.jumbotron small{
+    letter-spacing: 6px;
+    color: grey;
+}
