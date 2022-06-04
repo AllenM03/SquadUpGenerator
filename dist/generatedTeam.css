@@ -1,6 +1,3 @@
-body {
-    background-image: url(../assets/email-pattern.png);
-}
 .navbar-light .navbar-brand {
     color: rgb(163, 198, 166);
     text-align: center;
@@ -40,7 +37,6 @@ a:hover {
 
 }
 .jumbotron {
-    background-image: url(../assets/.png);
     border: 2px solid #e6e6e6;
 }
 .jumbotron h1{
