@@ -2,6 +2,16 @@
 An application using Node.js that the user inputs information in regards to the members of a software engineering team then generates an HTML webpage stylized by CSS that displays a brief summary for each person.
 
 ### About:
+This is a software engineering team generator application that creates new members depending on their position in the team. It can generate an infinite amount of members while still maintaining the structure of the HTML webpage its being displayed. The application runs on `Node.js` and also uses the `Inquirer`, `fs` and `colors` modules.
+
+The main purpose of this application was to implement Object-Oriented Programming with using classes and keeping the file structure organized while using the `jest` framework to test these classes.
+
+The 4 Main classes are:
+
+- *Employee.test.js*
+- *Manager.test.js*
+- *Engineer.test.js*
+- *Intern.test.js*
 
 ### Tests:
 
