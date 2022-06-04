@@ -14,7 +14,8 @@ body {
     box-shadow: 2px 2px 4px #c7c7c7;
 }
 .card-body {
-    background-color:#ffeee0;
+    background-color:#b3d1ff;
+    
 }
 .list-group {
     border: 1px solid grey;
@@ -35,7 +36,7 @@ a:hover {
 }
 .card-header {
     background-color: #3c0e4a;
-    border: 3px solid #2094ac;
+    border: 9px solid #b3d1ff;
 
 }
 .jumbotron {
@@ -48,6 +49,6 @@ a:hover {
     text-shadow: 3px 3px 8px #c78100;
 }
 .jumbotron small{
-    letter-spacing: 6px;
+    letter-spacing: 3px;
     color: rgb(103, 0, 0);
 }
